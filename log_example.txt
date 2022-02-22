@@ -1,0 +1,727 @@
+19:43:30,537 root INFO Optimizing models from the list: ['adv_inception_v3', 'bat_resnext26ts', 'beit_base_patch16_224', 'botnet26t_256', 'cait_m36_384', 'coat_lite_mini', 'convit_tiny', 'convmixer_768_32', 'convnext_base', 'crossvit_9_240', 'cspdarknet53', 'darknet53', 'deit_base_distilled_patch16_224', 'densenet121', 'dla34', 'dm_nfnet_f0', 'dpn68', 'eca_botnext26ts_256', 'ecaresnet26t', 'efficientnet_b0', 'efficientnet_el_pruned', 'efficientnet_lite0', 'efficientnetv2_l', 'ese_vovnet19b_dw', 'fbnetc_100', 'gcresnet33ts', 'gernet_l', 'gernet_m', 'gernet_s', 'ghostnet_050', 'gluon_senet154', 'gluon_seresnext50_32x4d', 'gluon_xception65', 'gmixer_12_224', 'gmlp_b16_224', 'halo2botnet50ts_256', 'hardcorenas_a', 'hrnet_w18', 'ig_resnext101_32x8d', 'inception_resnet_v2', 'inception_v3', 'inception_v4', 'jx_nest_base', 'lambda_resnet26rpt_256', 'lcnet_035', 'levit_128', 'mixer_b16_224', 'mnasnet_050', 'mobilenetv2_035', 'mobilenetv2_050', 'mobilenetv2_075', 'mobilenetv2_100', 'mobilenetv3_large_075', 'mobilenetv3_large_100', 'nasnetalarge', 'nest_base', 'nf_ecaresnet26', 'nf_ecaresnet50', 'nf_regnet_b0', 'nf_seresnet50', 'nfnet_f2s', 'pit_b_distilled_224', 'pit_s_224', 'pnasnet5large', 'regnetx_002', 'regnety_002', 'regnetz_b16', 'repvgg_a2', 'repvgg_b2', 'res2net50_14w_8s', 'resmlp_12_224', 'resmlp_36_224', 'resnest14d', 'resnet18', 'resnetblur18', 'resnetrs50', 'resnetv2_50d', 'resnetv2_50x1_bitm_in21k', 'resnext26ts', 'rexnetr_130', 'sebotnet33ts_256', 'sehalonet33ts', 'selecsls42', 'semnasnet_050', 'senet154', 'seresnet18', 'skresnet18', 'spnasnet_100', 'ssl_resnet18', 'swin_base_patch4_window7_224', 'swsl_resnet18', 'tresnet_m', 'tv_resnet34', 'twins_pcpvt_base', 'vgg11', 'visformer_small', 'vit_base_patch16_224', 'wide_resnet101_2', 'xception', 'xcit_large_24_p8_224']
+19:43:30,863 timm.models.helpers INFO Loading pretrained weights from url (https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-weights/adv_inception_v3-9e27bd63.pth)
+19:45:53,333 root INFO Performance gain after applying optimizations to adv_inception_v3: 3.3066584552963336
+19:45:53,455 timm.models.helpers INFO Loading pretrained weights from url (https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-attn-weights/bat_resnext26ts_256-fa6fd595.pth)
+19:45:53,555 root ERROR Unexpected error when optimizing model: bat_resnext26ts. Details: 
+19:45:54,349 timm.models.helpers INFO Loading pretrained weights from url (https://unilm.blob.core.windows.net/beit/beit_base_patch16_224_pt22k_ft22kto1k.pth)
+19:46:01,341 root ERROR Unexpected error when optimizing model: beit_base_patch16_224. Details: 'tuple' object has no attribute 'is_cuda'
+19:46:01,478 timm.models.helpers INFO Loading pretrained weights from url (https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-attn-weights/botnet26t_c1_256-167a0e9f.pth)
+19:46:01,539 root ERROR Unexpected error when optimizing model: botnet26t_256. Details: 
+19:46:03,927 timm.models.helpers INFO Loading pretrained weights from url (https://dl.fbaipublicfiles.com/deit/M36_384.pth)
+19:46:04,454 root ERROR Unexpected error when optimizing model: cait_m36_384. Details: Input image height (224) doesn't match model (384).
+19:46:04,577 timm.models.helpers INFO Loading pretrained weights from url (https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-coat-weights/coat_lite_mini-d7842000.pth)
+19:48:27,67 root INFO Performance gain after applying optimizations to coat_lite_mini: 1.5195864200820766
+19:48:27,272 timm.models.helpers INFO Loading pretrained weights from url (https://dl.fbaipublicfiles.com/convit/convit_tiny.pth)
+19:49:48,639 root INFO Cannot measure performance for optimized model: convit_tiny
+Details: [Step 1/11] Parsing and validating input arguments
+[ WARNING ]  -nstreams default value is determined automatically for a device. Although the automatic selection usually provides a reasonable performance, but it still may be non-optimal for some cases, for more information look at README. 
+[Step 2/11] Loading OpenVINO
+[ WARNING ] -hint default value is determined as 'THROUGHPUT' automatically for CPU deviceFor more detailed information look at README.
+[ INFO ] OpenVINO:
+         API version............. 2022.1.0-6682-121d59aa80a
+[ INFO ] Device info
+         CPU
+         openvino_intel_cpu_plugin version 2022.1
+         Build................... 2022.1.0-6682-121d59aa80a
+
+[Step 3/11] Setting device configuration
+[ WARNING ] -nstreams default value is determined automatically for CPU device. Although the automatic selection usually provides a reasonable performance, but it still may be non-optimal for some cases, for more information look at README.
+[Step 4/11] Reading network files
+[ INFO ] Read model took 42.55 ms
+[Step 5/11] Resizing network to match image sizes and given batch
+[ INFO ] Network batch size: 1
+[Step 6/11] Configuring input of the model
+[ INFO ] Model input 'input.0' precision u8, dimensions ([N,C,H,W]): 1 3 224 224
+[ INFO ] Model output 'output.0' precision f32, dimensions ([...]): 1 1000
+[Step 7/11] Loading the model to the device
+[ ERROR ] Node 1168 contains empty child edge for index 0
+Traceback (most recent call last):
+  File "/home/alex_k/work/virt_envs/pytorch_1.10_cpu/lib/python3.8/site-packages/openvino/tools/benchmark/main.py", line 292, in run
+    compiled_model = benchmark.core.compile_model(model, benchmark.device)
+  File "/home/alex_k/work/virt_envs/pytorch_1.10_cpu/lib/python3.8/site-packages/openvino/runtime/ie_api.py", line 263, in compile_model
+    super().compile_model(model, device_name, {} if config is None else config)
+RuntimeError: Node 1168 contains empty child edge for index 0
+
+
+19:49:48,749 timm.models.helpers INFO Loading pretrained weights from url (https://github.com/tmp-iclr/convmixer/releases/download/timm-v1.0/convmixer_768_32_ks7_p7_relu.pth.tar)
+19:49:49,38 root ERROR Unexpected error when optimizing model: convmixer_768_32. Details: Exporting the operator _convolution_mode to ONNX opset version 13 is not supported. Please feel free to request support or submit a pull request on PyTorch GitHub.
+19:49:49,816 timm.models.helpers INFO Loading pretrained weights from url (https://dl.fbaipublicfiles.com/convnext/convnext_base_1k_224_ema.pth)
+19:50:01,224 root ERROR Unexpected error when optimizing model: convnext_base. Details: 'tuple' object has no attribute 'is_cuda'
+19:50:01,407 timm.models.helpers INFO Loading pretrained weights from url (https://github.com/IBM/CrossViT/releases/download/weights-0.1/crossvit_9_224.pth)
+19:50:09,977 root ERROR Unexpected error when optimizing model: crossvit_9_240. Details: Exporting the operator upsample_bicubic2d to ONNX opset version 10 is not supported. Support for this operator was added in version 11, try exporting with this version.
+19:50:10,218 timm.models.helpers INFO Loading pretrained weights from url (https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-weights/cspdarknet53_ra_256-d05c7c21.pth)
+19:52:26,318 root INFO Performance gain after applying optimizations to cspdarknet53: 2.368919645256651
+19:52:26,717 timm.models.helpers WARNING No pretrained weights exist for this model. Using random initialization.
+19:54:39,599 root INFO Performance gain after applying optimizations to darknet53: 3.710073914126734
+19:54:40,438 timm.models.helpers INFO Loading pretrained weights from url (https://dl.fbaipublicfiles.com/deit/deit_base_distilled_patch16_224-df68dfff.pth)
+19:57:02,837 root INFO Performance gain after applying optimizations to deit_base_distilled_patch16_224: 2.995249406175772
+19:57:02,988 timm.models.helpers INFO Loading pretrained weights from url (https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-weights/densenet121_ra-50efcf5c.pth)
+19:59:39,902 root INFO Performance gain after applying optimizations to densenet121: 2.8912058925994124
+19:59:40,87 timm.models.helpers INFO Loading pretrained weights from url (http://dl.yf.io/dla/models/imagenet/dla34-ba72cf86.pth)
+20:01:47,582 root INFO Performance gain after applying optimizations to dla34: 3.6713522735702098
+20:01:48,238 timm.models.helpers INFO Loading pretrained weights from url (https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-dnf-weights/dm_nfnet_f0-604f9c3a.pth)
+20:02:18,951 root INFO Cannot measure performance for original model: dm_nfnet_f0
+Details: [Step 1/11] Parsing and validating input arguments
+[ WARNING ]  -nstreams default value is determined automatically for a device. Although the automatic selection usually provides a reasonable performance, but it still may be non-optimal for some cases, for more information look at README. 
+[Step 2/11] Loading OpenVINO
+[ WARNING ] -hint default value is determined as 'THROUGHPUT' automatically for CPU deviceFor more detailed information look at README.
+[ INFO ] OpenVINO:
+         API version............. 2022.1.0-6682-121d59aa80a
+[ INFO ] Device info
+         CPU
+         openvino_intel_cpu_plugin version 2022.1
+         Build................... 2022.1.0-6682-121d59aa80a
+
+[Step 3/11] Setting device configuration
+[ WARNING ] -nstreams default value is determined automatically for CPU device. Although the automatic selection usually provides a reasonable performance, but it still may be non-optimal for some cases, for more information look at README.
+[Step 4/11] Reading network files
+[ ERROR ] Check '(node.get_outputs_size() == 1)' failed at frontends/onnx/frontend/src/op/batch_norm.cpp:67:
+While validating ONNX node '<Node(BatchNormalization): BatchNormalization_60>':
+Training mode of BatchNormalization is not supported.
+Traceback (most recent call last):
+  File "/home/alex_k/work/virt_envs/pytorch_1.10_cpu/lib/python3.8/site-packages/openvino/tools/benchmark/main.py", line 250, in run
+    model = benchmark.read_model(args.path_to_model)
+  File "/home/alex_k/work/virt_envs/pytorch_1.10_cpu/lib/python3.8/site-packages/openvino/tools/benchmark/benchmark.py", line 62, in read_model
+    return self.core.read_model(model_filename, weights_filename)
+RuntimeError: Check '(node.get_outputs_size() == 1)' failed at frontends/onnx/frontend/src/op/batch_norm.cpp:67:
+While validating ONNX node '<Node(BatchNormalization): BatchNormalization_60>':
+Training mode of BatchNormalization is not supported.
+
+
+
+20:02:19,20 timm.models.helpers INFO Loading pretrained weights from url (https://github.com/rwightman/pytorch-dpn-pretrained/releases/download/v0.1/dpn68-66bebafa7.pth)
+20:04:44,350 root INFO Performance gain after applying optimizations to dpn68: 2.7621817241824993
+20:04:44,521 timm.models.helpers INFO Loading pretrained weights from url (https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-attn-weights/eca_botnext26ts_c_256-95a898f6.pth)
+20:04:44,598 root ERROR Unexpected error when optimizing model: eca_botnext26ts_256. Details: 
+20:04:44,730 timm.models.helpers INFO Loading pretrained weights from url (https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-weights/ecaresnet26t_ra2-46609757.pth)
+20:06:53,742 root INFO Performance gain after applying optimizations to ecaresnet26t: 1.322379431005629
+20:06:53,849 timm.models.helpers INFO Loading pretrained weights from url (https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-weights/efficientnet_b0_ra-3dd342df.pth)
+20:09:10,289 root INFO Performance gain after applying optimizations to efficientnet_b0: 1.6187251282543031
+20:09:10,436 timm.models.helpers INFO Loading pretrained weights from url (https://github.com/DeGirum/pruned-models/releases/download/efficientnet_v1.0/efficientnet_el_pruned70.pth)
+20:11:25,285 root INFO Performance gain after applying optimizations to efficientnet_el_pruned: 3.935241867722963
+20:11:25,372 timm.models.helpers INFO Loading pretrained weights from url (https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-weights/efficientnet_lite0_ra-37913777.pth)
+20:13:33,979 root INFO Performance gain after applying optimizations to efficientnet_lite0: 2.747981707417741
+20:13:35,99 timm.models.helpers WARNING No pretrained weights exist for this model. Using random initialization.
+20:19:44,921 root INFO Performance gain after applying optimizations to efficientnetv2_l: 2.855083317730762
+20:19:45,78 timm.models.helpers INFO Loading pretrained weights from url (https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-weights/ese_vovnet19b_dw-a8741004.pth)
+20:21:51,502 root INFO Performance gain after applying optimizations to ese_vovnet19b_dw: 3.8143912982847583
+20:21:51,568 timm.models.helpers INFO Loading pretrained weights from url (https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-weights/fbnetc_100-c345b898.pth)
+20:24:03,623 root INFO Performance gain after applying optimizations to fbnetc_100: 2.4926413321878487
+20:24:03,842 timm.models.helpers INFO Loading pretrained weights from url (https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-attn-weights/gcresnet33ts_256-0e0cd345.pth)
+20:26:20,849 root INFO Performance gain after applying optimizations to gcresnet33ts: 2.8759417378201912
+20:26:21,141 timm.models.helpers INFO Loading pretrained weights from url (https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-ger-weights/gernet_l-f31e2e8d.pth)
+20:28:33,943 root INFO Performance gain after applying optimizations to gernet_l: 3.919960098802964
+20:28:34,177 timm.models.helpers INFO Loading pretrained weights from url (https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-ger-weights/gernet_m-0873c53a.pth)
+20:30:43,357 root INFO Performance gain after applying optimizations to gernet_m: 3.876712869723177
+20:30:43,453 timm.models.helpers INFO Loading pretrained weights from url (https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-ger-weights/gernet_s-756b4751.pth)
+20:32:51,217 root INFO Performance gain after applying optimizations to gernet_s: 3.4152776883969365
+20:32:51,274 timm.models.helpers WARNING No pretrained weights exist for this model. Using random initialization.
+20:35:18,686 root INFO Performance gain after applying optimizations to ghostnet_050: 1.545831669935605
+20:35:19,723 timm.models.helpers INFO Loading pretrained weights from url (https://github.com/rwightman/pytorch-pretrained-gluonresnet/releases/download/v0.1/gluon_senet154-70a1a3c0.pth)
+20:39:39,901 root INFO Performance gain after applying optimizations to gluon_senet154: 3.520933205496964
+20:39:40,240 timm.models.helpers INFO Loading pretrained weights from url (https://github.com/rwightman/pytorch-pretrained-gluonresnet/releases/download/v0.1/gluon_seresnext50_32x4d-90cf2d6e.pth)
+20:42:00,909 root INFO Performance gain after applying optimizations to gluon_seresnext50_32x4d: 3.7395328338475107
+20:42:01,150 timm.models.helpers INFO Loading pretrained weights from url (https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-weights/gluon_xception-7015a15c.pth)
+20:44:40,826 root INFO Performance gain after applying optimizations to gluon_xception65: 3.913710128707331
+20:44:40,980 timm.models.helpers WARNING No pretrained weights exist for this model. Using random initialization.
+20:46:51,807 root INFO Performance gain after applying optimizations to gmixer_12_224: 2.442058049769267
+20:46:52,422 timm.models.helpers WARNING No pretrained weights exist for this model. Using random initialization.
+20:47:22,634 root INFO Cannot measure performance for original model: gmlp_b16_224
+Details: [Step 1/11] Parsing and validating input arguments
+[ WARNING ]  -nstreams default value is determined automatically for a device. Although the automatic selection usually provides a reasonable performance, but it still may be non-optimal for some cases, for more information look at README. 
+[Step 2/11] Loading OpenVINO
+[ WARNING ] -hint default value is determined as 'THROUGHPUT' automatically for CPU deviceFor more detailed information look at README.
+[ INFO ] OpenVINO:
+         API version............. 2022.1.0-6682-121d59aa80a
+[ INFO ] Device info
+         CPU
+         openvino_intel_cpu_plugin version 2022.1
+         Build................... 2022.1.0-6682-121d59aa80a
+
+[Step 3/11] Setting device configuration
+[ WARNING ] -nstreams default value is determined automatically for CPU device. Although the automatic selection usually provides a reasonable performance, but it still may be non-optimal for some cases, for more information look at README.
+[Step 4/11] Reading network files
+[ INFO ] Read model took 279.44 ms
+[Step 5/11] Resizing network to match image sizes and given batch
+[ INFO ] Network batch size: 1
+[Step 6/11] Configuring input of the model
+[ INFO ] Model input 'input.1' precision u8, dimensions ([N,C,H,W]): 1 3 224 224
+[ INFO ] Model output '2100' precision f32, dimensions ([...]): 1 1000
+
+
+20:47:22,925 timm.models.helpers INFO Loading pretrained weights from url (https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-attn-weights/halo2botnet50ts_a1h2_256-fd9c11a3.pth)
+20:47:23,24 root ERROR Unexpected error when optimizing model: halo2botnet50ts_256. Details: 
+20:47:23,80 timm.models.helpers INFO Loading pretrained weights from url (https://miil-public-eu.oss-eu-central-1.aliyuncs.com/public/HardCoReNAS/HardCoreNAS_A_Green_38ms_75.9_23474aeb.pth)
+20:49:31,700 root INFO Performance gain after applying optimizations to hardcorenas_a: 1.195892834698199
+20:49:32,62 timm.models.helpers INFO Loading pretrained weights from url (https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-hrnet/hrnetv2_w18-8cb57bb9.pth)
+20:55:53,931 root INFO Performance gain after applying optimizations to hrnet_w18: 3.4715705765407554
+20:55:54,727 timm.models.helpers INFO Loading pretrained weights from url (https://download.pytorch.org/models/ig_resnext101_32x8-c38310e5.pth)
+20:58:28,877 root INFO Performance gain after applying optimizations to ig_resnext101_32x8d: 4.308315463426257
+20:58:29,236 timm.models.helpers INFO Loading pretrained weights from url (https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-weights/inception_resnet_v2-940b1cd6.pth)
+21:02:29,849 root INFO Performance gain after applying optimizations to inception_resnet_v2: 3.226087664982891
+21:02:30,168 timm.models.helpers INFO Loading pretrained weights from url (https://download.pytorch.org/models/inception_v3_google-1a9a5a14.pth)
+21:04:53,57 root INFO Performance gain after applying optimizations to inception_v3: 3.4236192285213325
+21:04:53,281 timm.models.helpers INFO Loading pretrained weights from url (https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-cadene/inceptionv4-8e4777a0.pth)
+21:07:43,57 root INFO Performance gain after applying optimizations to inception_v4: 3.63280771586038
+21:07:43,721 timm.models.helpers INFO Loading pretrained weights from url (https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-vt3p-weights/jx_nest_base-8bc41011.pth)
+21:10:32,572 root INFO Performance gain after applying optimizations to jx_nest_base: 0.08534946236559139
+21:10:32,735 timm.models.helpers INFO Loading pretrained weights from url (https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-attn-weights/lambda_resnet26rpt_c_256-ab00292d.pth)
+21:10:32,830 root ERROR Unexpected error when optimizing model: lambda_resnet26rpt_256. Details: Expected batch2_sizes[0] == bs && batch2_sizes[1] == contraction_size to be true, but got false.  (Could this error message be improved?  If so, please report an enhancement request to PyTorch.)
+21:10:32,853 timm.models.helpers WARNING No pretrained weights exist for this model. Using random initialization.
+21:12:37,650 root INFO Performance gain after applying optimizations to lcnet_035: 1.4378964449033778
+21:12:37,772 timm.models.helpers INFO Loading pretrained weights from url (https://dl.fbaipublicfiles.com/LeViT/LeViT-128-b88c2750.pth)
+21:15:00,393 root INFO Performance gain after applying optimizations to levit_128: 1.4284459538587655
+21:15:00,886 timm.models.helpers INFO Loading pretrained weights from url (https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-vitjx/jx_mixer_b16_224-76587d61.pth)
+21:17:17,544 root INFO Performance gain after applying optimizations to mixer_b16_224: 3.4142697048935378
+21:17:17,703 timm.models.helpers WARNING No pretrained weights exist for this model. Using random initialization.
+21:19:26,198 root INFO Performance gain after applying optimizations to mnasnet_050: 1.778495099969375
+21:19:26,247 timm.models.helpers WARNING No pretrained weights exist for this model. Using random initialization.
+21:21:35,112 root INFO Performance gain after applying optimizations to mobilenetv2_035: 1.869409552427112
+21:21:35,169 timm.models.helpers INFO Loading pretrained weights from url (https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-weights/mobilenetv2_050-3d30d450.pth)
+21:23:44,285 root INFO Performance gain after applying optimizations to mobilenetv2_050: 2.124484701062604
+21:23:44,350 timm.models.helpers WARNING No pretrained weights exist for this model. Using random initialization.
+21:25:53,426 root INFO Performance gain after applying optimizations to mobilenetv2_075: 2.7135303140389118
+21:25:53,487 timm.models.helpers INFO Loading pretrained weights from url (https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-weights/mobilenetv2_100_ra-b33bc2c4.pth)
+21:28:02,582 root INFO Performance gain after applying optimizations to mobilenetv2_100: 2.796795667381248
+21:28:02,733 timm.models.helpers WARNING No pretrained weights exist for this model. Using random initialization.
+21:30:14,17 root INFO Performance gain after applying optimizations to mobilenetv3_large_075: 1.3566426275089059
+21:30:14,118 timm.models.helpers INFO Loading pretrained weights from url (https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-weights/mobilenetv3_large_100_ra-f55367f5.pth)
+21:32:25,701 root INFO Performance gain after applying optimizations to mobilenetv3_large_100: 1.3497887480542585
+21:32:26,147 timm.models.helpers INFO Loading pretrained weights from url (http://data.lip6.fr/cadene/pretrainedmodels/nasnetalarge-a1897284.pth)
+21:39:55,938 root INFO Cannot measure performance for original model: nasnetalarge
+Details: [Step 1/11] Parsing and validating input arguments
+[ WARNING ]  -nstreams default value is determined automatically for a device. Although the automatic selection usually provides a reasonable performance, but it still may be non-optimal for some cases, for more information look at README. 
+[Step 2/11] Loading OpenVINO
+[ WARNING ] -hint default value is determined as 'THROUGHPUT' automatically for CPU deviceFor more detailed information look at README.
+[ INFO ] OpenVINO:
+         API version............. 2022.1.0-6682-121d59aa80a
+[ INFO ] Device info
+         CPU
+         openvino_intel_cpu_plugin version 2022.1
+         Build................... 2022.1.0-6682-121d59aa80a
+
+[Step 3/11] Setting device configuration
+[ WARNING ] -nstreams default value is determined automatically for CPU device. Although the automatic selection usually provides a reasonable performance, but it still may be non-optimal for some cases, for more information look at README.
+[Step 4/11] Reading network files
+[ INFO ] Read model took 395.32 ms
+[Step 5/11] Resizing network to match image sizes and given batch
+[ INFO ] Network batch size: 1
+[Step 6/11] Configuring input of the model
+[ INFO ] Model input 'input.1' precision u8, dimensions ([N,C,H,W]): 1 3 224 224
+[ INFO ] Model output '4831' precision f32, dimensions ([...]): 1 1000
+[Step 7/11] Loading the model to the device
+[ ERROR ] could not create a descriptor for a pooling forward propagation primitive
+Traceback (most recent call last):
+  File "/home/alex_k/work/virt_envs/pytorch_1.10_cpu/lib/python3.8/site-packages/openvino/tools/benchmark/main.py", line 292, in run
+    compiled_model = benchmark.core.compile_model(model, benchmark.device)
+  File "/home/alex_k/work/virt_envs/pytorch_1.10_cpu/lib/python3.8/site-packages/openvino/runtime/ie_api.py", line 263, in compile_model
+    super().compile_model(model, device_name, {} if config is None else config)
+RuntimeError: could not create a descriptor for a pooling forward propagation primitive
+
+
+21:39:56,584 timm.models.helpers WARNING No pretrained weights exist for this model. Using random initialization.
+21:42:43,582 root INFO Performance gain after applying optimizations to nest_base: 2.4431636247198205
+21:42:43,800 timm.models.helpers WARNING No pretrained weights exist for this model. Using random initialization.
+21:42:53,480 root INFO Cannot measure performance for original model: nf_ecaresnet26
+Details: [Step 1/11] Parsing and validating input arguments
+[ WARNING ]  -nstreams default value is determined automatically for a device. Although the automatic selection usually provides a reasonable performance, but it still may be non-optimal for some cases, for more information look at README. 
+[Step 2/11] Loading OpenVINO
+[ WARNING ] -hint default value is determined as 'THROUGHPUT' automatically for CPU deviceFor more detailed information look at README.
+[ INFO ] OpenVINO:
+         API version............. 2022.1.0-6682-121d59aa80a
+[ INFO ] Device info
+         CPU
+         openvino_intel_cpu_plugin version 2022.1
+         Build................... 2022.1.0-6682-121d59aa80a
+
+[Step 3/11] Setting device configuration
+[ WARNING ] -nstreams default value is determined automatically for CPU device. Although the automatic selection usually provides a reasonable performance, but it still may be non-optimal for some cases, for more information look at README.
+[Step 4/11] Reading network files
+[ ERROR ] Check '(node.get_outputs_size() == 1)' failed at frontends/onnx/frontend/src/op/batch_norm.cpp:67:
+While validating ONNX node '<Node(BatchNormalization): BatchNormalization_15>':
+Training mode of BatchNormalization is not supported.
+Traceback (most recent call last):
+  File "/home/alex_k/work/virt_envs/pytorch_1.10_cpu/lib/python3.8/site-packages/openvino/tools/benchmark/main.py", line 250, in run
+    model = benchmark.read_model(args.path_to_model)
+  File "/home/alex_k/work/virt_envs/pytorch_1.10_cpu/lib/python3.8/site-packages/openvino/tools/benchmark/benchmark.py", line 62, in read_model
+    return self.core.read_model(model_filename, weights_filename)
+RuntimeError: Check '(node.get_outputs_size() == 1)' failed at frontends/onnx/frontend/src/op/batch_norm.cpp:67:
+While validating ONNX node '<Node(BatchNormalization): BatchNormalization_15>':
+Training mode of BatchNormalization is not supported.
+
+
+
+21:42:53,738 timm.models.helpers WARNING No pretrained weights exist for this model. Using random initialization.
+21:43:17,274 root INFO Cannot measure performance for original model: nf_ecaresnet50
+Details: [Step 1/11] Parsing and validating input arguments
+[ WARNING ]  -nstreams default value is determined automatically for a device. Although the automatic selection usually provides a reasonable performance, but it still may be non-optimal for some cases, for more information look at README. 
+[Step 2/11] Loading OpenVINO
+[ WARNING ] -hint default value is determined as 'THROUGHPUT' automatically for CPU deviceFor more detailed information look at README.
+[ INFO ] OpenVINO:
+         API version............. 2022.1.0-6682-121d59aa80a
+[ INFO ] Device info
+         CPU
+         openvino_intel_cpu_plugin version 2022.1
+         Build................... 2022.1.0-6682-121d59aa80a
+
+[Step 3/11] Setting device configuration
+[ WARNING ] -nstreams default value is determined automatically for CPU device. Although the automatic selection usually provides a reasonable performance, but it still may be non-optimal for some cases, for more information look at README.
+[Step 4/11] Reading network files
+[ ERROR ] Check '(node.get_outputs_size() == 1)' failed at frontends/onnx/frontend/src/op/batch_norm.cpp:67:
+While validating ONNX node '<Node(BatchNormalization): BatchNormalization_15>':
+Training mode of BatchNormalization is not supported.
+Traceback (most recent call last):
+  File "/home/alex_k/work/virt_envs/pytorch_1.10_cpu/lib/python3.8/site-packages/openvino/tools/benchmark/main.py", line 250, in run
+    model = benchmark.read_model(args.path_to_model)
+  File "/home/alex_k/work/virt_envs/pytorch_1.10_cpu/lib/python3.8/site-packages/openvino/tools/benchmark/benchmark.py", line 62, in read_model
+    return self.core.read_model(model_filename, weights_filename)
+RuntimeError: Check '(node.get_outputs_size() == 1)' failed at frontends/onnx/frontend/src/op/batch_norm.cpp:67:
+While validating ONNX node '<Node(BatchNormalization): BatchNormalization_15>':
+Training mode of BatchNormalization is not supported.
+
+
+
+21:43:17,366 timm.models.helpers WARNING No pretrained weights exist for this model. Using random initialization.
+21:43:40,151 root INFO Cannot measure performance for original model: nf_regnet_b0
+Details: [Step 1/11] Parsing and validating input arguments
+[ WARNING ]  -nstreams default value is determined automatically for a device. Although the automatic selection usually provides a reasonable performance, but it still may be non-optimal for some cases, for more information look at README. 
+[Step 2/11] Loading OpenVINO
+[ WARNING ] -hint default value is determined as 'THROUGHPUT' automatically for CPU deviceFor more detailed information look at README.
+[ INFO ] OpenVINO:
+         API version............. 2022.1.0-6682-121d59aa80a
+[ INFO ] Device info
+         CPU
+         openvino_intel_cpu_plugin version 2022.1
+         Build................... 2022.1.0-6682-121d59aa80a
+
+[Step 3/11] Setting device configuration
+[ WARNING ] -nstreams default value is determined automatically for CPU device. Although the automatic selection usually provides a reasonable performance, but it still may be non-optimal for some cases, for more information look at README.
+[Step 4/11] Reading network files
+[ ERROR ] Check '(node.get_outputs_size() == 1)' failed at frontends/onnx/frontend/src/op/batch_norm.cpp:67:
+While validating ONNX node '<Node(BatchNormalization): BatchNormalization_15>':
+Training mode of BatchNormalization is not supported.
+Traceback (most recent call last):
+  File "/home/alex_k/work/virt_envs/pytorch_1.10_cpu/lib/python3.8/site-packages/openvino/tools/benchmark/main.py", line 250, in run
+    model = benchmark.read_model(args.path_to_model)
+  File "/home/alex_k/work/virt_envs/pytorch_1.10_cpu/lib/python3.8/site-packages/openvino/tools/benchmark/benchmark.py", line 62, in read_model
+    return self.core.read_model(model_filename, weights_filename)
+RuntimeError: Check '(node.get_outputs_size() == 1)' failed at frontends/onnx/frontend/src/op/batch_norm.cpp:67:
+While validating ONNX node '<Node(BatchNormalization): BatchNormalization_15>':
+Training mode of BatchNormalization is not supported.
+
+
+
+21:43:40,404 timm.models.helpers WARNING No pretrained weights exist for this model. Using random initialization.
+21:44:04,630 root INFO Cannot measure performance for original model: nf_seresnet50
+Details: [Step 1/11] Parsing and validating input arguments
+[ WARNING ]  -nstreams default value is determined automatically for a device. Although the automatic selection usually provides a reasonable performance, but it still may be non-optimal for some cases, for more information look at README. 
+[Step 2/11] Loading OpenVINO
+[ WARNING ] -hint default value is determined as 'THROUGHPUT' automatically for CPU deviceFor more detailed information look at README.
+[ INFO ] OpenVINO:
+         API version............. 2022.1.0-6682-121d59aa80a
+[ INFO ] Device info
+         CPU
+         openvino_intel_cpu_plugin version 2022.1
+         Build................... 2022.1.0-6682-121d59aa80a
+
+[Step 3/11] Setting device configuration
+[ WARNING ] -nstreams default value is determined automatically for CPU device. Although the automatic selection usually provides a reasonable performance, but it still may be non-optimal for some cases, for more information look at README.
+[Step 4/11] Reading network files
+[ ERROR ] Check '(node.get_outputs_size() == 1)' failed at frontends/onnx/frontend/src/op/batch_norm.cpp:67:
+While validating ONNX node '<Node(BatchNormalization): BatchNormalization_15>':
+Training mode of BatchNormalization is not supported.
+Traceback (most recent call last):
+  File "/home/alex_k/work/virt_envs/pytorch_1.10_cpu/lib/python3.8/site-packages/openvino/tools/benchmark/main.py", line 250, in run
+    model = benchmark.read_model(args.path_to_model)
+  File "/home/alex_k/work/virt_envs/pytorch_1.10_cpu/lib/python3.8/site-packages/openvino/tools/benchmark/benchmark.py", line 62, in read_model
+    return self.core.read_model(model_filename, weights_filename)
+RuntimeError: Check '(node.get_outputs_size() == 1)' failed at frontends/onnx/frontend/src/op/batch_norm.cpp:67:
+While validating ONNX node '<Node(BatchNormalization): BatchNormalization_15>':
+Training mode of BatchNormalization is not supported.
+
+
+
+21:44:06,326 timm.models.helpers WARNING No pretrained weights exist for this model. Using random initialization.
+21:46:37,434 root INFO Cannot measure performance for original model: nfnet_f2s
+Details: [Step 1/11] Parsing and validating input arguments
+[ WARNING ]  -nstreams default value is determined automatically for a device. Although the automatic selection usually provides a reasonable performance, but it still may be non-optimal for some cases, for more information look at README. 
+[Step 2/11] Loading OpenVINO
+[ WARNING ] -hint default value is determined as 'THROUGHPUT' automatically for CPU deviceFor more detailed information look at README.
+[ INFO ] OpenVINO:
+         API version............. 2022.1.0-6682-121d59aa80a
+[ INFO ] Device info
+         CPU
+         openvino_intel_cpu_plugin version 2022.1
+         Build................... 2022.1.0-6682-121d59aa80a
+
+[Step 3/11] Setting device configuration
+[ WARNING ] -nstreams default value is determined automatically for CPU device. Although the automatic selection usually provides a reasonable performance, but it still may be non-optimal for some cases, for more information look at README.
+[Step 4/11] Reading network files
+[ ERROR ] Check '(node.get_outputs_size() == 1)' failed at frontends/onnx/frontend/src/op/batch_norm.cpp:67:
+While validating ONNX node '<Node(BatchNormalization): BatchNormalization_15>':
+Training mode of BatchNormalization is not supported.
+Traceback (most recent call last):
+  File "/home/alex_k/work/virt_envs/pytorch_1.10_cpu/lib/python3.8/site-packages/openvino/tools/benchmark/main.py", line 250, in run
+    model = benchmark.read_model(args.path_to_model)
+  File "/home/alex_k/work/virt_envs/pytorch_1.10_cpu/lib/python3.8/site-packages/openvino/tools/benchmark/benchmark.py", line 62, in read_model
+    return self.core.read_model(model_filename, weights_filename)
+RuntimeError: Check '(node.get_outputs_size() == 1)' failed at frontends/onnx/frontend/src/op/batch_norm.cpp:67:
+While validating ONNX node '<Node(BatchNormalization): BatchNormalization_15>':
+Training mode of BatchNormalization is not supported.
+
+
+
+21:46:37,760 timm.models.helpers INFO Loading pretrained weights from url (https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-pit-weights/pit_b_distill_840.pth)
+21:49:01,670 root INFO Performance gain after applying optimizations to pit_b_distilled_224: 2.0915047446904653
+21:49:01,860 timm.models.helpers INFO Loading pretrained weights from url (https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-pit-weights/pit_s_809.pth)
+21:51:16,716 root INFO Performance gain after applying optimizations to pit_s_224: 1.8216933490920812
+21:51:17,141 timm.models.helpers INFO Loading pretrained weights from url (https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-cadene/pnasnet5large-bf079911.pth)
+21:55:29,965 root INFO Cannot measure performance for original model: pnasnet5large
+Details: [Step 1/11] Parsing and validating input arguments
+[ WARNING ]  -nstreams default value is determined automatically for a device. Although the automatic selection usually provides a reasonable performance, but it still may be non-optimal for some cases, for more information look at README. 
+[Step 2/11] Loading OpenVINO
+[ WARNING ] -hint default value is determined as 'THROUGHPUT' automatically for CPU deviceFor more detailed information look at README.
+[ INFO ] OpenVINO:
+         API version............. 2022.1.0-6682-121d59aa80a
+[ INFO ] Device info
+         CPU
+         openvino_intel_cpu_plugin version 2022.1
+         Build................... 2022.1.0-6682-121d59aa80a
+
+[Step 3/11] Setting device configuration
+[ WARNING ] -nstreams default value is determined automatically for CPU device. Although the automatic selection usually provides a reasonable performance, but it still may be non-optimal for some cases, for more information look at README.
+[Step 4/11] Reading network files
+[ INFO ] Read model took 387.48 ms
+[Step 5/11] Resizing network to match image sizes and given batch
+[ INFO ] Network batch size: 1
+[Step 6/11] Configuring input of the model
+[ INFO ] Model input 'input.1' precision u8, dimensions ([N,C,H,W]): 1 3 224 224
+[ INFO ] Model output '4335' precision f32, dimensions ([...]): 1 1000
+[Step 7/11] Loading the model to the device
+[ ERROR ] could not create a descriptor for a pooling forward propagation primitive
+Traceback (most recent call last):
+  File "/home/alex_k/work/virt_envs/pytorch_1.10_cpu/lib/python3.8/site-packages/openvino/tools/benchmark/main.py", line 292, in run
+    compiled_model = benchmark.core.compile_model(model, benchmark.device)
+  File "/home/alex_k/work/virt_envs/pytorch_1.10_cpu/lib/python3.8/site-packages/openvino/runtime/ie_api.py", line 263, in compile_model
+    super().compile_model(model, device_name, {} if config is None else config)
+RuntimeError: could not create a descriptor for a pooling forward propagation primitive
+
+
+21:55:30,17 timm.models.helpers INFO Loading pretrained weights from url (https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-regnet/regnetx_002-e7e85e5c.pth)
+21:57:37,601 root INFO Performance gain after applying optimizations to regnetx_002: 3.4721693009690466
+21:57:37,646 timm.models.helpers INFO Loading pretrained weights from url (https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-regnet/regnety_002-e68ca334.pth)
+21:59:50,731 root INFO Performance gain after applying optimizations to regnety_002: 2.942995807248291
+21:59:50,844 timm.models.helpers INFO Loading pretrained weights from url (https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-attn-weights/regnetz_b_raa-677d9606.pth)
+22:02:19,244 root INFO Performance gain after applying optimizations to regnetz_b16: 2.09167287582539
+22:02:19,521 timm.models.helpers INFO Loading pretrained weights from url (https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-repvgg-weights/repvgg_a2-c1ee6d2b.pth)
+22:04:31,336 root INFO Performance gain after applying optimizations to repvgg_a2: 3.3724045116636763
+22:04:32,142 timm.models.helpers INFO Loading pretrained weights from url (https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-repvgg-weights/repvgg_b2-25b7494e.pth)
+22:06:53,1 root INFO Performance gain after applying optimizations to repvgg_b2: 3.4702434625789
+22:06:53,278 timm.models.helpers INFO Loading pretrained weights from url (https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-res2net/res2net50_14w_8s-6527dddc.pth)
+22:09:46,988 root INFO Performance gain after applying optimizations to res2net50_14w_8s: 3.6733385016562132
+22:09:47,135 timm.models.helpers INFO Loading pretrained weights from url (https://dl.fbaipublicfiles.com/deit/resmlp_12_no_dist.pth)
+22:09:47,263 root ERROR Unexpected error when optimizing model: resmlp_12_224. Details: Exporting the operator addcmul to ONNX opset version 13 is not supported. Please feel free to request support or submit a pull request on PyTorch GitHub.
+22:09:47,633 timm.models.helpers INFO Loading pretrained weights from url (https://dl.fbaipublicfiles.com/deit/resmlp_36_no_dist.pth)
+22:09:47,921 root ERROR Unexpected error when optimizing model: resmlp_36_224. Details: Exporting the operator addcmul to ONNX opset version 13 is not supported. Please feel free to request support or submit a pull request on PyTorch GitHub.
+22:09:48,8 timm.models.helpers INFO Loading pretrained weights from url (https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-weights/gluon_resnest14-9c8fe254.pth)
+22:11:55,248 root INFO Performance gain after applying optimizations to resnest14d: 2.5247262521247578
+22:11:55,375 timm.models.helpers INFO Loading pretrained weights from url (https://download.pytorch.org/models/resnet18-5c106cde.pth)
+22:13:59,710 root INFO Performance gain after applying optimizations to resnet18: 3.5490824228280466
+22:13:59,822 timm.models.helpers WARNING No pretrained weights exist for this model. Using random initialization.
+22:16:04,477 root INFO Performance gain after applying optimizations to resnetblur18: 3.1361852964255754
+22:16:04,797 timm.models.helpers INFO Loading pretrained weights from url (https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-rs-weights/resnetrs50_ema-6b53758b.pth)
+22:18:26,461 root INFO Performance gain after applying optimizations to resnetrs50: 3.5022904703529263
+22:18:26,728 timm.models.helpers WARNING No pretrained weights exist for this model. Using random initialization.
+22:20:38,726 root INFO Performance gain after applying optimizations to resnetv2_50d: 3.6132577307534928
+22:20:54,858 root INFO Cannot measure performance for original model: resnetv2_50x1_bitm_in21k
+Details: [Step 1/11] Parsing and validating input arguments
+[ WARNING ]  -nstreams default value is determined automatically for a device. Although the automatic selection usually provides a reasonable performance, but it still may be non-optimal for some cases, for more information look at README. 
+[Step 2/11] Loading OpenVINO
+[ WARNING ] -hint default value is determined as 'THROUGHPUT' automatically for CPU deviceFor more detailed information look at README.
+[ INFO ] OpenVINO:
+         API version............. 2022.1.0-6682-121d59aa80a
+[ INFO ] Device info
+         CPU
+         openvino_intel_cpu_plugin version 2022.1
+         Build................... 2022.1.0-6682-121d59aa80a
+
+[Step 3/11] Setting device configuration
+[ WARNING ] -nstreams default value is determined automatically for CPU device. Although the automatic selection usually provides a reasonable performance, but it still may be non-optimal for some cases, for more information look at README.
+[Step 4/11] Reading network files
+[ ERROR ] Check '(node.get_outputs_size() == 1)' failed at frontends/onnx/frontend/src/op/batch_norm.cpp:67:
+While validating ONNX node '<Node(BatchNormalization): BatchNormalization_12>':
+Training mode of BatchNormalization is not supported.
+Traceback (most recent call last):
+  File "/home/alex_k/work/virt_envs/pytorch_1.10_cpu/lib/python3.8/site-packages/openvino/tools/benchmark/main.py", line 250, in run
+    model = benchmark.read_model(args.path_to_model)
+  File "/home/alex_k/work/virt_envs/pytorch_1.10_cpu/lib/python3.8/site-packages/openvino/tools/benchmark/benchmark.py", line 62, in read_model
+    return self.core.read_model(model_filename, weights_filename)
+RuntimeError: Check '(node.get_outputs_size() == 1)' failed at frontends/onnx/frontend/src/op/batch_norm.cpp:67:
+While validating ONNX node '<Node(BatchNormalization): BatchNormalization_12>':
+Training mode of BatchNormalization is not supported.
+
+
+
+22:20:54,956 timm.models.helpers INFO Loading pretrained weights from url (https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-attn-weights/resnext26ts_256_ra2-8bbd9106.pth)
+22:23:00,837 root INFO Performance gain after applying optimizations to resnext26ts: 2.676922595386397
+22:23:00,925 timm.models.helpers WARNING No pretrained weights exist for this model. Using random initialization.
+22:25:19,330 root INFO Performance gain after applying optimizations to rexnetr_130: 1.261375117103547
+22:25:19,551 timm.models.helpers INFO Loading pretrained weights from url (https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-attn-weights/sebotnet33ts_a1h2_256-957e3c3e.pth)
+22:25:19,631 root ERROR Unexpected error when optimizing model: sebotnet33ts_256. Details: 
+22:25:19,783 timm.models.helpers INFO Loading pretrained weights from url (https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-attn-weights/sehalonet33ts_256-87e053f9.pth)
+22:25:19,855 root ERROR Unexpected error when optimizing model: sehalonet33ts. Details: 
+22:25:20,110 timm.models.helpers WARNING No pretrained weights exist for this model. Using random initialization.
+22:27:29,145 root INFO Performance gain after applying optimizations to selecsls42: 3.941629652922448
+22:27:29,203 timm.models.helpers WARNING No pretrained weights exist for this model. Using random initialization.
+22:29:40,791 root INFO Performance gain after applying optimizations to semnasnet_050: 1.88985591128165
+22:29:41,843 timm.models.helpers WARNING No pretrained weights exist for this model. Using random initialization.
+22:34:01,390 root INFO Performance gain after applying optimizations to senet154: 3.571559633027523
+22:34:01,555 timm.models.helpers WARNING No pretrained weights exist for this model. Using random initialization.
+22:36:08,145 root INFO Performance gain after applying optimizations to seresnet18: 3.48502002222362
+22:36:08,282 timm.models.helpers INFO Loading pretrained weights from url (https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-weights/skresnet18_ra-4eec2804.pth)
+22:38:18,326 root INFO Performance gain after applying optimizations to skresnet18: 1.9394543070405488
+22:38:18,406 timm.models.helpers INFO Loading pretrained weights from url (https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-weights/spnasnet_100-048bc3f4.pth)
+22:40:30,350 root INFO Performance gain after applying optimizations to spnasnet_100: 2.462756906270789
+22:40:30,493 timm.models.helpers INFO Loading pretrained weights from url (https://dl.fbaipublicfiles.com/semiweaksupervision/model_files/semi_supervised_resnet18-d92f0530.pth)
+22:42:34,752 root INFO Performance gain after applying optimizations to ssl_resnet18: 3.603136720081828
+22:42:35,627 timm.models.helpers INFO Loading pretrained weights from url (https://github.com/SwinTransformer/storage/releases/download/v1.0.0/swin_base_patch4_window7_224_22kto1k.pth)
+22:42:58,812 root ERROR Unexpected error when optimizing model: swin_base_patch4_window7_224. Details: 'tuple' object has no attribute 'is_cuda'
+22:42:58,911 timm.models.helpers INFO Loading pretrained weights from url (https://dl.fbaipublicfiles.com/semiweaksupervision/model_files/semi_weakly_supervised_resnet18-118f1556.pth)
+22:45:03,203 root INFO Performance gain after applying optimizations to swsl_resnet18: 3.5922290737619216
+22:45:03,501 timm.models.helpers INFO Loading pretrained weights from url (https://miil-public-eu.oss-eu-central-1.aliyuncs.com/model-zoo/ImageNet_21K_P/models/timm/tresnet_m_1k_miil_83_1.pth)
+22:45:03,594 root ERROR Unexpected error when optimizing model: tresnet_m. Details: Please install InplaceABN:'pip install git+https://github.com/mapillary/inplace_abn.git@v1.0.12'
+22:45:03,780 timm.models.helpers INFO Loading pretrained weights from url (https://download.pytorch.org/models/resnet34-333f7ec4.pth)
+22:47:11,397 root INFO Performance gain after applying optimizations to tv_resnet34: 3.5428371940200427
+22:47:11,906 timm.models.helpers INFO Loading pretrained weights from url (https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-vt3p-weights/twins_pcpvt_base-e5ecb09b.pth)
+22:50:37,323 root INFO Performance gain after applying optimizations to twins_pcpvt_base: 2.2221687326994823
+22:50:38,470 timm.models.helpers INFO Loading pretrained weights from url (https://download.pytorch.org/models/vgg11-bbd30ac9.pth)
+22:52:53,112 root INFO Performance gain after applying optimizations to vgg11: 3.5751537235253936
+22:52:53,588 timm.models.helpers INFO Loading pretrained weights from url (https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-vt3p-weights/visformer_small-839e1f5b.pth)
+22:55:09,728 root INFO Performance gain after applying optimizations to visformer_small: 2.5442554148242524
+22:57:33,154 root INFO Performance gain after applying optimizations to vit_base_patch16_224: 2.5263473053892214
+22:57:34,294 timm.models.helpers INFO Loading pretrained weights from url (https://download.pytorch.org/models/wide_resnet101_2-32ee1156.pth)
+23:00:10,952 root INFO Performance gain after applying optimizations to wide_resnet101_2: 3.9834180262102166
+23:00:11,237 timm.models.helpers INFO Loading pretrained weights from url (https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-cadene/xception-43020ad28.pth)
+23:02:24,813 root INFO Performance gain after applying optimizations to xception: 3.720504475183076
+23:02:26,465 timm.models.helpers INFO Loading pretrained weights from url (https://dl.fbaipublicfiles.com/xcit/xcit_large_24_p8_224.pth)
+23:02:50,583 root ERROR Unexpected error when optimizing model: xcit_large_24_p8_224. Details: Unknown return type. Can not trace function call
+23:02:50,591 root INFO +-------------------+--------------+-----------+----------+----------+---------+
+|       Model       |   Methods    | Ops Ratio | FP32 FPS | Opt FPS  | Sppedup |
++===================+==============+===========+==========+==========+=========+
+| adv_inception_v3  | quantization | 0.003     | 276.040  | 912.770  | 3.31x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| bat_resnext26ts   | quantization | N/A       | N/A      | N/A      | N/A     |
++-------------------+--------------+-----------+----------+----------+---------+
+| beit_base_patch16 | quantization | N/A       | N/A      | N/A      | N/A     |
+| _224              |              |           |          |          |         |
++-------------------+--------------+-----------+----------+----------+---------+
+| botnet26t_256     | quantization | N/A       | N/A      | N/A      | N/A     |
++-------------------+--------------+-----------+----------+----------+---------+
+| cait_m36_384      | quantization | N/A       | N/A      | N/A      | N/A     |
++-------------------+--------------+-----------+----------+----------+---------+
+| coat_lite_mini    | quantization | 0.009     | 187.630  | 285.120  | 1.52x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| convit_tiny       | quantization | N/A       | 425.700  | N/A      | N/A     |
++-------------------+--------------+-----------+----------+----------+---------+
+| convmixer_768_32  | quantization | N/A       | N/A      | N/A      | N/A     |
++-------------------+--------------+-----------+----------+----------+---------+
+| convnext_base     | quantization | N/A       | N/A      | N/A      | N/A     |
++-------------------+--------------+-----------+----------+----------+---------+
+| crossvit_9_240    | quantization | N/A       | N/A      | N/A      | N/A     |
++-------------------+--------------+-----------+----------+----------+---------+
+| cspdarknet53      | quantization | 0.002     | 148.840  | 352.590  | 2.37x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| darknet53         | quantization | 0.002     | 120.410  | 446.730  | 3.71x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| deit_base_distill | quantization | 0.007     | 33.680   | 100.880  | 3.00x   |
+| ed_patch16_224    |              |           |          |          |         |
++-------------------+--------------+-----------+----------+----------+---------+
+| densenet121       | quantization | 0.545     | 200.930  | 580.930  | 2.89x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| dla34             | quantization | 0.001     | 269.620  | 989.870  | 3.67x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| dm_nfnet_f0       | quantization | N/A       | N/A      | N/A      | N/A     |
++-------------------+--------------+-----------+----------+----------+---------+
+| dpn68             | quantization | 0.310     | 232.110  | 641.130  | 2.76x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| eca_botnext26ts_2 | quantization | N/A       | N/A      | N/A      | N/A     |
+| 56                |              |           |          |          |         |
++-------------------+--------------+-----------+----------+----------+---------+
+| ecaresnet26t      | quantization | 0.001     | 262.920  | 347.680  | 1.32x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| efficientnet_b0   | quantization | 0.010     | 834.280  | 1350.470 | 1.62x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| efficientnet_el_p | quantization | 0.000     | 166.620  | 655.690  | 3.94x   |
+| runed             |              |           |          |          |         |
++-------------------+--------------+-----------+----------+----------+---------+
+| efficientnet_lite | quantization | 0.000     | 1211.420 | 3328.960 | 2.75x   |
+| 0                 |              |           |          |          |         |
++-------------------+--------------+-----------+----------+----------+---------+
+| efficientnetv2_l  | quantization | 0.003     | 53.410   | 152.490  | 2.86x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| ese_vovnet19b_dw  | quantization | 0.022     | 430.260  | 1641.180 | 3.81x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| fbnetc_100        | quantization | 0.001     | 1245.470 | 3104.510 | 2.49x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| gcresnet33ts      | quantization | 0.002     | 179.190  | 515.340  | 2.88x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| gernet_l          | quantization | 0.000     | 210.520  | 825.230  | 3.92x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| gernet_m          | quantization | 0.000     | 253.230  | 981.700  | 3.88x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| gernet_s          | quantization | 0.001     | 932.340  | 3184.200 | 3.42x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| ghostnet_050      | quantization | 0.024     | 1152.260 | 1781.200 | 1.55x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| gluon_senet154    | quantization | 0.001     | 31.290   | 110.170  | 3.52x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| gluon_seresnext50 | quantization | 0.001     | 136.140  | 509.100  | 3.74x   |
+| _32x4d            |              |           |          |          |         |
++-------------------+--------------+-----------+----------+----------+---------+
+| gluon_xception65  | quantization | 0.001     | 89.350   | 349.690  | 3.91x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| gmixer_12_224     | quantization | 0.023     | 231.870  | 566.240  | 2.44x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| gmlp_b16_224      | quantization | 0.118     | N/A      | N/A      | N/A     |
++-------------------+--------------+-----------+----------+----------+---------+
+| halo2botnet50ts_2 | quantization | N/A       | N/A      | N/A      | N/A     |
+| 56                |              |           |          |          |         |
++-------------------+--------------+-----------+----------+----------+---------+
+| hardcorenas_a     | quantization | 0.012     | 1034.290 | 1236.900 | 1.20x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| hrnet_w18         | quantization | 0.001     | 125.750  | 436.550  | 3.47x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| ig_resnext101_32x | quantization | 0.000     | 41.970   | 180.820  | 4.31x   |
+| 8d                |              |           |          |          |         |
++-------------------+--------------+-----------+----------+----------+---------+
+| inception_resnet_ | quantization | 0.262     | 122.740  | 395.970  | 3.23x   |
+| v2                |              |           |          |          |         |
++-------------------+--------------+-----------+----------+----------+---------+
+| inception_v3      | quantization | 0.003     | 273.760  | 937.250  | 3.42x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| inception_v4      | quantization | 0.002     | 130.640  | 474.590  | 3.63x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| jx_nest_base      | quantization | 0.104     | 29.760   | 2.540    | 0.09x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| lambda_resnet26rp | quantization | N/A       | N/A      | N/A      | N/A     |
+| t_256             |              |           |          |          |         |
++-------------------+--------------+-----------+----------+----------+---------+
+| lcnet_035         | quantization | 0.008     | 1491.380 | 2144.450 | 1.44x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| levit_128         | quantization | 0.764     | 683.120  | 975.800  | 1.43x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| mixer_b16_224     | quantization | 0.010     | 53.540   | 182.800  | 3.41x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| mnasnet_050       | quantization | 0.001     | 3657.120 | 6504.170 | 1.78x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| mobilenetv2_035   | quantization | 0.001     | 4153.290 | 7764.200 | 1.87x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| mobilenetv2_050   | quantization | 0.000     | 3124.400 | 6637.740 | 2.12x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| mobilenetv2_075   | quantization | 0.000     | 1734.180 | 4705.750 | 2.71x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| mobilenetv2_100   | quantization | 0.000     | 1418.080 | 3966.080 | 2.80x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| mobilenetv3_large | quantization | 0.012     | 1150.900 | 1561.360 | 1.36x   |
+| _075              |              |           |          |          |         |
++-------------------+--------------+-----------+----------+----------+---------+
+| mobilenetv3_large | quantization | 0.013     | 944.370  | 1274.700 | 1.35x   |
+| _100              |              |           |          |          |         |
++-------------------+--------------+-----------+----------+----------+---------+
+| nasnetalarge      | quantization | N/A       | N/A      | N/A      | N/A     |
++-------------------+--------------+-----------+----------+----------+---------+
+| nest_base         | quantization | 0.856     | 31.230   | 76.300   | 2.44x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| nf_ecaresnet26    | quantization | N/A       | N/A      | N/A      | N/A     |
++-------------------+--------------+-----------+----------+----------+---------+
+| nf_ecaresnet50    | quantization | N/A       | N/A      | N/A      | N/A     |
++-------------------+--------------+-----------+----------+----------+---------+
+| nf_regnet_b0      | quantization | N/A       | N/A      | N/A      | N/A     |
++-------------------+--------------+-----------+----------+----------+---------+
+| nf_seresnet50     | quantization | N/A       | N/A      | N/A      | N/A     |
++-------------------+--------------+-----------+----------+----------+---------+
+| nfnet_f2s         | quantization | N/A       | N/A      | N/A      | N/A     |
++-------------------+--------------+-----------+----------+----------+---------+
+| pit_b_distilled_2 | quantization | 0.012     | 44.260   | 92.570   | 2.09x   |
+| 24                |              |           |          |          |         |
++-------------------+--------------+-----------+----------+----------+---------+
+| pit_s_224         | quantization | 0.029     | 186.140  | 339.090  | 1.82x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| pnasnet5large     | quantization | N/A       | N/A      | N/A      | N/A     |
++-------------------+--------------+-----------+----------+----------+---------+
+| regnetx_002       | quantization | 0.001     | 1700.640 | 5904.910 | 3.47x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| regnety_002       | quantization | 0.003     | 1392.880 | 4099.240 | 2.94x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| regnetz_b16       | quantization | 0.005     | 389.210  | 814.100  | 2.09x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| repvgg_a2         | quantization | 0.000     | 156.040  | 526.230  | 3.37x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| repvgg_b2         | quantization | 0.000     | 44.360   | 153.940  | 3.47x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| res2net50_14w_8s  | quantization | 0.001     | 141.890  | 521.210  | 3.67x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| resmlp_12_224     | quantization | N/A       | N/A      | N/A      | N/A     |
++-------------------+--------------+-----------+----------+----------+---------+
+| resmlp_36_224     | quantization | N/A       | N/A      | N/A      | N/A     |
++-------------------+--------------+-----------+----------+----------+---------+
+| resnest14d        | quantization | 0.002     | 252.970  | 638.680  | 2.52x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| resnet18          | quantization | 0.001     | 471.350  | 1672.860 | 3.55x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| resnetblur18      | quantization | 0.003     | 369.570  | 1159.040 | 3.14x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| resnetrs50        | quantization | 0.003     | 154.990  | 542.820  | 3.50x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| resnetv2_50d      | quantization | 0.327     | 171.070  | 618.120  | 3.61x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| resnetv2_50x1_bit | quantization | N/A       | N/A      | N/A      | N/A     |
+| m_in21k           |              |           |          |          |         |
++-------------------+--------------+-----------+----------+----------+---------+
+| resnext26ts       | quantization | 0.004     | 319.490  | 855.250  | 2.68x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| rexnetr_130       | quantization | 0.004     | 544.390  | 686.680  | 1.26x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| sebotnet33ts_256  | quantization | N/A       | N/A      | N/A      | N/A     |
++-------------------+--------------+-----------+----------+----------+---------+
+| sehalonet33ts     | quantization | N/A       | N/A      | N/A      | N/A     |
++-------------------+--------------+-----------+----------+----------+---------+
+| selecsls42        | quantization | 0         | 254.410  | 1002.790 | 3.94x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| semnasnet_050     | quantization | 0.001     | 2798.970 | 5289.650 | 1.89x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| senet154          | quantization | 0.001     | 32.700   | 116.790  | 3.57x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| seresnet18        | quantization | 0.001     | 476.970  | 1662.250 | 3.49x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| skresnet18        | quantization | 0.002     | 396.560  | 769.110  | 1.94x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| spnasnet_100      | quantization | 0.001     | 1428.050 | 3516.940 | 2.46x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| ssl_resnet18      | quantization | 0.001     | 469.280  | 1690.880 | 3.60x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| swin_base_patch4_ | quantization | N/A       | N/A      | N/A      | N/A     |
+| window7_224       |              |           |          |          |         |
++-------------------+--------------+-----------+----------+----------+---------+
+| swsl_resnet18     | quantization | 0.001     | 468.670  | 1683.570 | 3.59x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| tresnet_m         | quantization | N/A       | N/A      | N/A      | N/A     |
++-------------------+--------------+-----------+----------+----------+---------+
+| tv_resnet34       | quantization | 0.001     | 243.480  | 862.610  | 3.54x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| twins_pcpvt_base  | quantization | 0.085     | 83.090   | 184.640  | 2.22x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| vgg11             | quantization | 0.998     | 87.820   | 313.970  | 3.58x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| visformer_small   | quantization | 0.871     | 133.430  | 339.480  | 2.54x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| vit_base_patch16_ | quantization | 0.007     | 33.400   | 84.380   | 2.53x   |
+| 224               |              |           |          |          |         |
++-------------------+--------------+-----------+----------+----------+---------+
+| wide_resnet101_2  | quantization | 0.000     | 37.390   | 148.940  | 3.98x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| xception          | quantization | 0.018     | 147.480  | 548.700  | 3.72x   |
++-------------------+--------------+-----------+----------+----------+---------+
+| xcit_large_24_p8_ | quantization | N/A       | N/A      | N/A      | N/A     |
+| 224               |              |           |          |          |         |
++-------------------+--------------+-----------+----------+----------+---------+
